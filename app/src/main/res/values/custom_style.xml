@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="specific_corner_rounded">
+        <item name="cornerSizeBottomLeft">50dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+    </style>
+
+    <style name="circular">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
