@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">KotlinOrderApp</string>
+    <string name="espresso">Espresso</string>
+    <string name="double_espresso">Double Espresso</string>
+    <string name="ristretto">Ristretto</string>
+    <string name="americano">Americano</string>
+    <string name="flat_white">Flat White</string>
+    <string name="cappucino">Cappucino</string>
+    <string name="latte">Latte</string>
+    <string name="macchiato">Macchiato</string>
+    <string name="mocha">Mocha</string>
+    <string name="white_mocha">White Mocha</string>
+    <string name="affogato">Affogato</string>
+    <string name="caramel_macchiato">Caramel Macchiato</string>
 </resources>
