@@ -13,6 +13,9 @@ class OrderViewModel : ViewModel() {
     private val _coffeePrice = MutableLiveData<String>()
     val coffeePrice: LiveData<String> get() = _coffeePrice
 
+    private val _coffeeCount = MutableLiveData(1)
+    val coffeeCount: LiveData<Int> get() = _coffeeCount
+
     fun setCoffeeInfo(coffeeName : String, coffeePrice : String) {
         _coffeeName.value = coffeeName
         _coffeePrice.value = coffeePrice
@@ -21,9 +24,14 @@ class OrderViewModel : ViewModel() {
     fun resetOrder() {
         _coffeeName.value = ""
         _coffeePrice.value = ""
+        _coffeeCount.value = 1
     }
 
-    fun write() {
-        Log.e("w", "clicked")
+    fun incCoffeeCount() {
+        _coffeeCount.value = _coffeeCount.value?.inc()
+    }
+
+    fun decCoffeeCount() {
+        if(_coffeeCount.value!! > 1) _coffeeCount.value = _coffeeCount.value?.dec()
     }
 }
