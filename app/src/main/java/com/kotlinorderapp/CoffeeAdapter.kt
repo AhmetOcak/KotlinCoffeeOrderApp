@@ -28,7 +28,7 @@ class CoffeeAdapter(
 
     override fun onBindViewHolder(holder: CoffeeAdapter.ViewHolder, position: Int) {
         holder.coffeeName.text = coffeeName[position]
-        holder.coffeePrice.text = coffeePrice[position]
+        holder.coffeePrice.text = "$" + coffeePrice[position]
         holder.coffeeDescription.text = coffeeDescription[position]
         holder.coffeeImage.setImageResource(coffeeImage[position])
     }

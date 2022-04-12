@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.flexbox.AlignItems
+import com.google.android.flexbox.FlexboxLayoutManager
+import com.google.android.flexbox.JustifyContent
 import com.kotlinorderapp.CoffeeAdapter
 import com.kotlinorderapp.R
 import com.kotlinorderapp.databinding.FragmentCoffeeMenuBinding
@@ -50,7 +53,10 @@ class CoffeeMenuFragment : Fragment() {
             coffeeImageList
         )
 
-        binding.recylerview.layoutManager = LinearLayoutManager(activity)
+        val layoutManager = FlexboxLayoutManager(activity)
+        layoutManager.justifyContent = JustifyContent.SPACE_AROUND
+        layoutManager.alignItems = AlignItems.CENTER
+        binding.recylerview.layoutManager = layoutManager
         binding.recylerview.adapter = adapter
 
         return binding.root
