@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="checkoutFragment"
-            type="com.kotlinorderapp.ui.order.CheckoutFragment" />
+            name="viewModel"
+            type="com.kotlinorderapp.model.OrderViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,11 +42,12 @@
             app:shapeAppearanceOverlay="@style/specific_corner_rounded" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/c_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Americano"
+            tools:text="Americano"
+            android:text="@{viewModel.coffeeName}"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -124,11 +125,12 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/c_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
-            android:text="$19"
+            tools:text="$19"
+            android:text="@{@string/coffee_price(viewModel.coffeePrice)}"
             android:textColor="@color/light_brown"
             android:textSize="24sp"
             android:textStyle="bold"

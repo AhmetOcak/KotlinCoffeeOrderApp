@@ -5,4 +5,5 @@
     <string name="empty" />
     <string name="coffee_count">1</string>
     <string name="coffee_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non posuere quam. Etiam nec mattis orci. Ut sit amet scelerisque arcu, eu sodales nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</string>
+    <string name="coffee_price">$%s</string>
 </resources>

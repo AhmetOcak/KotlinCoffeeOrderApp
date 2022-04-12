@@ -7,6 +7,9 @@
         <variable
             name="viewModel"
             type="com.kotlinorderapp.model.OrderViewModel" />
+        <variable
+            name="coffeeMenuFragment"
+            type="com.kotlinorderapp.ui.order.CoffeeMenuFragment" />
     </data>
 
     <androidx.cardview.widget.CardView

@@ -5,13 +5,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.kotlinorderapp.model.OrderViewModel
+
+
 
 class CoffeeAdapter(
     private val coffeeName: Array<String>,
     private val coffeePrice: Array<String>,
     private val coffeeDescription: Array<String>,
-    private val coffeeImage: ArrayList<Int>
+    private val coffeeImage: ArrayList<Int>,
+    private val sharedViewModel: OrderViewModel,
 ) : RecyclerView.Adapter<CoffeeAdapter.ViewHolder>() {
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
@@ -19,6 +26,8 @@ class CoffeeAdapter(
         val coffeePrice : TextView = itemView.findViewById(R.id.coffee_price)
         val coffeeDescription : TextView = itemView.findViewById(R.id.coffee_description)
         val coffeeImage : ImageView = itemView.findViewById(R.id.coffee_image)
+
+        val view = itemView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeAdapter.ViewHolder {
@@ -28,9 +37,14 @@ class CoffeeAdapter(
 
     override fun onBindViewHolder(holder: CoffeeAdapter.ViewHolder, position: Int) {
         holder.coffeeName.text = coffeeName[position]
-        holder.coffeePrice.text = "$" + coffeePrice[position]
+        holder.coffeePrice.text = coffeePrice[position]
         holder.coffeeDescription.text = coffeeDescription[position]
         holder.coffeeImage.setImageResource(coffeeImage[position])
+
+        holder.view.setOnClickListener {
+            sharedViewModel.setCoffeeInfo(holder.coffeeName.text.toString(), holder.coffeePrice.text.toString())
+            holder.view.findNavController().navigate(R.id.action_coffeeMenuFragment_to_checkoutFragment)
+        }
     }
 
     override fun getItemCount() = coffeeName.size
