@@ -1,7 +1,9 @@
 package com.kotlinorderapp
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.kotlinorderapp.databinding.ActivityMainBinding
@@ -19,5 +21,6 @@ class MainActivity : AppCompatActivity() {
         val navFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navFragment.navController
+
     }
 }
