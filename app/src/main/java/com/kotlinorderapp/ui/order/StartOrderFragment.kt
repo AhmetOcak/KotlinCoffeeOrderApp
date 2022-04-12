@@ -30,7 +30,7 @@ class StartOrderFragment : Fragment() {
         binding.startOrderFragment = this@StartOrderFragment
     }
 
-    fun goToNextFragmnet() {
+    fun goToNextFragment() {
         findNavController().navigate(R.id.action_startOrderFragment_to_coffeeMenuFragment)
     }
 

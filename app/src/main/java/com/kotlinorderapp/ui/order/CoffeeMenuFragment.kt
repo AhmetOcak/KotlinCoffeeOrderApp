@@ -36,10 +36,6 @@ class CoffeeMenuFragment : Fragment() {
         R.drawable.coffee_cup,
     )
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

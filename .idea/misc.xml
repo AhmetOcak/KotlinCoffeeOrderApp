@@ -5,13 +5,15 @@
       <map>
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/ctr_bg.xml" value="0.3185" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/ic_baseline_add.xml" value="0.3185" />
+        <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/ic_baseline_remove.xml" value="0.3185" />
+        <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/ic_baseline_remove_24.xml" value="0.3185" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/ic_baseline_shopping_cart_.xml" value="0.3185" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/layout_bg.xml" value="0.3185" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/drawable/toolbar_bg.xml" value="0.3185" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/activity_main.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/coffee_card.xml" value="0.67" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/coffee_price.xml" value="0.35572916666666665" />
-        <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/fragment_checkout.xml" value="0.3183876811594203" />
+        <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/fragment_checkout.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/fragment_coffee_menu.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/fragment_start_order.xml" value="0.3183876811594203" />
         <entry key="..\:/Users/ahmet/KotlinOrderApp/app/src/main/res/layout/toolbar.xml" value="0.3697916666666667" />

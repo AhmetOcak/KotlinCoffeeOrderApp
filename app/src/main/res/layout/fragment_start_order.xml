@@ -43,7 +43,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             android:minWidth="200dp"
             android:minHeight="65dp"
-            android:onClick="@{() -> startOrderFragment.goToNextFragmnet()}"/>
+            android:onClick="@{() -> startOrderFragment.goToNextFragment()}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
