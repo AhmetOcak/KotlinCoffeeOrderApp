@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coffee_description">
+        <item name="espresso">try coffees from İstanbul, Turkey</item>
+        <item name="double_espresso">try coffees from İstanbul, Turkey</item>
+        <item name="ristretto">try coffees from İstanbul, Turkey</item>
+        <item name="americano">try coffees from İstanbul, Turkey</item>
+        <item name="flat_white">try coffees from İstanbul, Turkey</item>
+        <item name="cappucino">try coffees from İstanbul, Turkey</item>
+        <item name="latte">try coffees from İstanbul, Turkey</item>
+        <item name="macchiato">try coffees from İstanbul, Turkey</item>
+        <item name="mocha">try coffees from İstanbul, Turkey</item>
+        <item name="white_mocha">try coffees from İstanbul, Turkey</item>
+        <item name="affogato">try coffees from İstanbul, Turkey</item>
+        <item name="caramel_macchiato">try coffees from İstanbul, Turkey</item>
+    </string-array>
+</resources>

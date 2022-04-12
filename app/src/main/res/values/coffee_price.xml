@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coffee_price">
+        <item name="espresso">2.25</item>
+        <item name="double_espresso">4.75</item>
+        <item name="ristretto">3.25</item>
+        <item name="americano">2.75</item>
+        <item name="flat_white">3.00</item>
+        <item name="cappucino">2.75</item>
+        <item name="latte">1.75</item>
+        <item name="macchiato">3.25</item>
+        <item name="mocha">1.50</item>
+        <item name="white_mocha">2.50</item>
+        <item name="affogato">2.75</item>
+        <item name="caramel_macchiato">3.75</item>
+    </string-array>
+</resources>

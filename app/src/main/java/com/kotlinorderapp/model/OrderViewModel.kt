@@ -1,4 +1,8 @@
 package com.kotlinorderapp.model
 
-class OrderViewModel {
+import androidx.lifecycle.ViewModel
+
+class OrderViewModel : ViewModel() {
+
+
 }

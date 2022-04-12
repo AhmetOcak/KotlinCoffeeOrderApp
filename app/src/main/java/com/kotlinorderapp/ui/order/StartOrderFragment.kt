@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import com.kotlinorderapp.R
 import com.kotlinorderapp.databinding.FragmentStartOrderBinding
 
-
 class StartOrderFragment : Fragment() {
     private var _binding: FragmentStartOrderBinding? = null
 

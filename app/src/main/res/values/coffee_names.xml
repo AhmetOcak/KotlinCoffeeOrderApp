@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coffee_names">
+        <item name="espresso">Espresso</item>
+        <item name="double_espresso">Double Espresso</item>
+        <item name="ristretto">Ristretto</item>
+        <item name="americano">Americano</item>
+        <item name="flat_white">Flat White</item>
+        <item name="cappucino">Cappucino</item>
+        <item name="latte">Latte</item>
+        <item name="macchiato">Macchiato</item>
+        <item name="mocha">Mocha</item>
+        <item name="white_mocha">White Mocha</item>
+        <item name="affogato">Affogato</item>
+        <item name="caramel_macchiato">Caramel Macchiato</item>
+    </string-array>
+</resources>
