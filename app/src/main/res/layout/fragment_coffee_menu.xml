@@ -5,6 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.order.CoffeeMenuFragment">
 
+    <data>
+        <variable
+            name="coffeeMenuFragment"
+            type="com.kotlinorderapp.ui.order.CoffeeMenuFragment" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,13 +30,42 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recylerview"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:foregroundGravity="center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/menu_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/shop_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_shopping_cart_"
+            app:layout_constraintBottom_toBottomOf="@id/menu_toolbar"
+            app:layout_constraintEnd_toEndOf="@id/menu_toolbar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/menu_toolbar"
+            app:layout_constraintTop_toTopOf="@id/menu_toolbar"
+            android:onClick="@{() -> coffeeMenuFragment.goToNextFragment()}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -21,10 +21,17 @@ class StartOrderFragment : Fragment() {
     ): View? {
         _binding = FragmentStartOrderBinding.inflate(inflater, container, false)
 
-        binding.startButton.setOnClickListener {
-            findNavController().navigate(R.id.action_startOrderFragment_to_coffeeMenuFragment)
-        }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.startOrderFragment = this@StartOrderFragment
+    }
+
+    fun goToNextFragmnet() {
+        findNavController().navigate(R.id.action_startOrderFragment_to_coffeeMenuFragment)
     }
 
     override fun onDestroy() {
