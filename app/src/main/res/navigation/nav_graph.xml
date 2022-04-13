@@ -30,6 +30,8 @@
         tools:layout="@layout/fragment_checkout" >
         <action
             android:id="@+id/action_checkoutFragment_to_coffeeMenuFragment"
-            app:destination="@id/coffeeMenuFragment" />
+            app:destination="@id/coffeeMenuFragment"
+            app:popUpTo="@id/coffeeMenuFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
