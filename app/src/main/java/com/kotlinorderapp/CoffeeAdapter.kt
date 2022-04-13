@@ -6,11 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlinorderapp.model.OrderViewModel
-
 
 
 class CoffeeAdapter(
@@ -21,11 +18,11 @@ class CoffeeAdapter(
     private val sharedViewModel: OrderViewModel,
 ) : RecyclerView.Adapter<CoffeeAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val coffeeName : TextView = itemView.findViewById(R.id.coffee_name)
-        val coffeePrice : TextView = itemView.findViewById(R.id.coffee_price)
-        val coffeeDescription : TextView = itemView.findViewById(R.id.coffee_description)
-        val coffeeImage : ImageView = itemView.findViewById(R.id.coffee_image)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val coffeeName: TextView = itemView.findViewById(R.id.coffee_name)
+        val coffeePrice: TextView = itemView.findViewById(R.id.coffee_price)
+        val coffeeDescription: TextView = itemView.findViewById(R.id.coffee_description)
+        val coffeeImage: ImageView = itemView.findViewById(R.id.coffee_image)
 
         val view = itemView
     }
@@ -42,8 +39,12 @@ class CoffeeAdapter(
         holder.coffeeImage.setImageResource(coffeeImage[position])
 
         holder.view.setOnClickListener {
-            sharedViewModel.setCoffeeInfo(holder.coffeeName.text.toString(), holder.coffeePrice.text.toString().toDouble())
-            holder.view.findNavController().navigate(R.id.action_coffeeMenuFragment_to_checkoutFragment)
+            sharedViewModel.setCoffeeInfo(
+                holder.coffeeName.text.toString(),
+                holder.coffeePrice.text.toString().toDouble()
+            )
+            holder.view.findNavController()
+                .navigate(R.id.action_coffeeMenuFragment_to_checkoutFragment)
         }
     }
 

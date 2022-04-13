@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.kotlinorderapp.model.OrderViewModel" />
+
         <variable
             name="checkoutFragment"
             type="com.kotlinorderapp.ui.order.CheckoutFragment" />
@@ -24,6 +26,7 @@
             android:backgroundTint="@color/light_brown"
             android:insetTop="0dp"
             android:insetBottom="0dp"
+            android:onClick="@{() -> checkoutFragment.showSnackbar()}"
             android:text="@string/order_now"
             android:textAllCaps="false"
             android:textColor="@color/dark_brown"
@@ -31,8 +34,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{() -> checkoutFragment.showSnackbar()}"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView3"
@@ -50,14 +52,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            tools:text="Americano"
             android:text="@{viewModel.coffeeName}"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="0.100000024" />
+            app:layout_constraintVertical_bias="0.100000024"
+            tools:text="Americano" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
@@ -91,11 +93,11 @@
                     android:elevation="0dp"
                     android:minWidth="48dp"
                     android:minHeight="48dp"
+                    android:onClick="@{() -> viewModel.decCoffeeCount()}"
                     android:src="@drawable/ic_baseline_remove"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:onClick="@{() -> viewModel.decCoffeeCount()}"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -105,13 +107,13 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:text="@{viewModel.coffeeCount.toString()}"
-                    tools:text="1"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/add_coffee"
                     app:layout_constraintStart_toEndOf="@+id/remove_coffee"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1" />
 
                 <ImageButton
                     android:id="@+id/add_coffee"
@@ -122,12 +124,12 @@
                     android:elevation="0dp"
                     android:minWidth="48dp"
                     android:minHeight="48dp"
+                    android:onClick="@{() -> viewModel.incCoffeeCount()}"
                     android:src="@drawable/ic_baseline_add"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="HardcodedText"
-                    android:onClick="@{() -> viewModel.incCoffeeCount()}"/>
+                    tools:ignore="HardcodedText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -136,7 +138,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
-            tools:text="$19"
             android:text="@{@string/coffee_price(viewModel.total.toString())}"
             android:textColor="@color/light_brown"
             android:textSize="24sp"
@@ -144,7 +145,8 @@
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="0.35000002" />
+            app:layout_constraintVertical_bias="0.35000002"
+            tools:text="$19" />
 
         <TextView
             android:id="@+id/textView3"

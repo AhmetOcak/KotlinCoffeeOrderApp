@@ -1,20 +1,16 @@
 package com.kotlinorderapp.ui.order
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.flexbox.AlignItems
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import com.kotlinorderapp.CoffeeAdapter
 import com.kotlinorderapp.R
-import com.kotlinorderapp.databinding.CoffeeCardBinding
 import com.kotlinorderapp.databinding.FragmentCoffeeMenuBinding
 import com.kotlinorderapp.model.OrderViewModel
 
@@ -64,17 +60,8 @@ class CoffeeMenuFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.apply {
-            coffeeMenuFragment = this@CoffeeMenuFragment
-        }
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
-
 }

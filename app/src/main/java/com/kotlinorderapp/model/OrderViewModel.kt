@@ -1,10 +1,8 @@
 package com.kotlinorderapp.model
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.android.material.snackbar.Snackbar
 
 class OrderViewModel : ViewModel() {
 
@@ -18,7 +16,7 @@ class OrderViewModel : ViewModel() {
     val coffeeCount: LiveData<Int> get() = _coffeeCount
 
     private val _total = MutableLiveData(0.0)
-    val total : LiveData<Double> get() = _total
+    val total: LiveData<Double> get() = _total
 
     fun setCoffeeInfo(coffeeName: String, coffeePrice: Double) {
         _coffeeName.value = coffeeName

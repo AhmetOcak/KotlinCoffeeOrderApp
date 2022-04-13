@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <data>
-        <variable
-            name="viewModel"
-            type="com.kotlinorderapp.model.OrderViewModel" />
-        <variable
-            name="coffeeMenuFragment"
-            type="com.kotlinorderapp.ui.order.CoffeeMenuFragment" />
-    </data>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/coffee_card"

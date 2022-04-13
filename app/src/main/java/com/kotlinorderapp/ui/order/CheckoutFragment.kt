@@ -1,6 +1,5 @@
 package com.kotlinorderapp.ui.order
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,7 +34,7 @@ class CheckoutFragment : Fragment() {
                 findNavController().navigate(R.id.action_checkoutFragment_to_coffeeMenuFragment)
             }
         }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner ,callback)
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         return binding.root
     }
@@ -55,8 +54,10 @@ class CheckoutFragment : Fragment() {
     }
 
     fun showSnackbar() {
-        Snackbar.make(binding.root, "Order successful", Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(
+            binding.root,
+            resources.getString(R.string.order_successful),
+            Snackbar.LENGTH_SHORT
+        ).show()
     }
-
-
 }

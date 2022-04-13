@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.order.StartOrderFragment">
 
     <data>
+
         <variable
             name="startOrderFragment"
             type="com.kotlinorderapp.ui.order.StartOrderFragment" />
@@ -32,6 +32,9 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/dark_brown"
             android:elevation="0dp"
+            android:minWidth="200dp"
+            android:minHeight="65dp"
+            android:onClick="@{() -> startOrderFragment.goToNextFragment()}"
             android:padding="12dp"
             android:text="@string/start_button"
             android:textAllCaps="false"
@@ -40,10 +43,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            android:minWidth="200dp"
-            android:minHeight="65dp"
-            android:onClick="@{() -> startOrderFragment.goToNextFragment()}"/>
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

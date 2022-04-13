@@ -20,7 +20,6 @@ class StartOrderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentStartOrderBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
