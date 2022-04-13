@@ -7,6 +7,9 @@
         <variable
             name="viewModel"
             type="com.kotlinorderapp.model.OrderViewModel" />
+        <variable
+            name="checkoutFragment"
+            type="com.kotlinorderapp.ui.order.CheckoutFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +31,8 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="@{() -> checkoutFragment.showSnackbar()}"/>
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView3"
@@ -133,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             tools:text="$19"
-            android:text="@{@string/coffee_price(viewModel.coffeePrice)}"
+            android:text="@{@string/coffee_price(viewModel.total.toString())}"
             android:textColor="@color/light_brown"
             android:textSize="24sp"
             android:textStyle="bold"

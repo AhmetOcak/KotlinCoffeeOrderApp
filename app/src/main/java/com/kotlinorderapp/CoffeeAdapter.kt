@@ -42,7 +42,7 @@ class CoffeeAdapter(
         holder.coffeeImage.setImageResource(coffeeImage[position])
 
         holder.view.setOnClickListener {
-            sharedViewModel.setCoffeeInfo(holder.coffeeName.text.toString(), holder.coffeePrice.text.toString())
+            sharedViewModel.setCoffeeInfo(holder.coffeeName.text.toString(), holder.coffeePrice.text.toString().toDouble())
             holder.view.findNavController().navigate(R.id.action_coffeeMenuFragment_to_checkoutFragment)
         }
     }
