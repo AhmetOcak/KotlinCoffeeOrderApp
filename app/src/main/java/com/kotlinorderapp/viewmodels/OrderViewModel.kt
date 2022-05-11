@@ -1,4 +1,4 @@
-package com.kotlinorderapp.model
+package com.kotlinorderapp.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -46,7 +46,7 @@ class OrderViewModel : ViewModel() {
         if (process) {
             _total.value = _total.value?.plus(_coffeePrice.value!!)
         } else {
-            _total.value = _total.value?.minus(_total.value!!)
+            _total.value = _total.value?.minus(_coffeePrice.value!!)
         }
     }
 }
