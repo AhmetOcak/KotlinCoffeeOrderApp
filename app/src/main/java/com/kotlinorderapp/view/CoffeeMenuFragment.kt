@@ -1,4 +1,4 @@
-package com.kotlinorderapp.ui.order
+package com.kotlinorderapp.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,10 +9,11 @@ import androidx.fragment.app.activityViewModels
 import com.google.android.flexbox.AlignItems
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
-import com.kotlinorderapp.CoffeeAdapter
+import com.kotlinorderapp.CoffeeData
+import com.kotlinorderapp.adapter.CoffeeAdapter
 import com.kotlinorderapp.R
 import com.kotlinorderapp.databinding.FragmentCoffeeMenuBinding
-import com.kotlinorderapp.model.OrderViewModel
+import com.kotlinorderapp.viewmodels.OrderViewModel
 
 
 class CoffeeMenuFragment : Fragment() {
@@ -21,21 +22,6 @@ class CoffeeMenuFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val sharedViewModel: OrderViewModel by activityViewModels()
-
-    private val coffeeImageList = arrayListOf<Int>(
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-        R.drawable.coffee_cup,
-    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +33,7 @@ class CoffeeMenuFragment : Fragment() {
             resources.getStringArray(R.array.coffee_names),
             resources.getStringArray(R.array.coffee_price),
             resources.getStringArray(R.array.coffee_description),
-            coffeeImageList,
+            CoffeeData().coffeeImageList,
             sharedViewModel
         )
 

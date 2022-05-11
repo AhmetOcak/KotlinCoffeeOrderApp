@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startOrderFragment"
-        android:name="com.kotlinorderapp.ui.order.StartOrderFragment"
+        android:name="com.kotlinorderapp.view.StartOrderFragment"
         android:label="fragment_start_order"
         tools:layout="@layout/fragment_start_order" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/coffeeMenuFragment"
-        android:name="com.kotlinorderapp.ui.order.CoffeeMenuFragment"
+        android:name="com.kotlinorderapp.view.CoffeeMenuFragment"
         android:label="fragment_coffee_menu"
         tools:layout="@layout/fragment_coffee_menu" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkoutFragment"
-        android:name="com.kotlinorderapp.ui.order.CheckoutFragment"
+        android:name="com.kotlinorderapp.view.CheckoutFragment"
         android:label="fragment_checkout"
         tools:layout="@layout/fragment_checkout" >
         <action

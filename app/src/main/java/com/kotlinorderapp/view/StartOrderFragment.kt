@@ -1,4 +1,4 @@
-package com.kotlinorderapp.ui.order
+package com.kotlinorderapp.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,7 +25,6 @@ class StartOrderFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.startOrderFragment = this@StartOrderFragment
     }
 

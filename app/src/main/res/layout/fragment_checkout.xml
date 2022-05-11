@@ -7,11 +7,11 @@
 
         <variable
             name="viewModel"
-            type="com.kotlinorderapp.model.OrderViewModel" />
+            type="com.kotlinorderapp.viewmodels.OrderViewModel" />
 
         <variable
             name="checkoutFragment"
-            type="com.kotlinorderapp.ui.order.CheckoutFragment" />
+            type="com.kotlinorderapp.view.CheckoutFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,4 +1,4 @@
-package com.kotlinorderapp.ui.order
+package com.kotlinorderapp.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.kotlinorderapp.R
 import com.kotlinorderapp.databinding.FragmentCheckoutBinding
-import com.kotlinorderapp.model.OrderViewModel
+import com.kotlinorderapp.viewmodels.OrderViewModel
 
 class CheckoutFragment : Fragment() {
 
@@ -35,7 +35,6 @@ class CheckoutFragment : Fragment() {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
-
         return binding.root
     }
 

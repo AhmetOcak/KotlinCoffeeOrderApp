@@ -1,9 +1,10 @@
-package com.kotlinorderapp
+package com.kotlinorderapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.kotlinorderapp.R
 import com.kotlinorderapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
