@@ -9,7 +9,7 @@ import androidx.fragment.app.activityViewModels
 import com.google.android.flexbox.AlignItems
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
-import com.kotlinorderapp.CoffeeData
+import com.kotlinorderapp.data.CoffeeData
 import com.kotlinorderapp.adapter.CoffeeAdapter
 import com.kotlinorderapp.R
 import com.kotlinorderapp.databinding.FragmentCoffeeMenuBinding
