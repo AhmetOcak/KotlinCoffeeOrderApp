@@ -1,4 +1,4 @@
-# KotlinCoffeeOrderApp
+# KotlinCoffeeOrderApp ☕
 
 
 <p align="left" width="100%">
